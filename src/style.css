@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+p{
+  font-family: cursive;
+  font-size: 20px;
+  text-align: left;
+}
+
+img{
+  width:200px;
+  height:200px;
+  display: block;
+  margin: 0 auto;
+}
+
+input{
+  display:inline; 
+}
+
+label{
+  display: inline;
+  font-family: Goudy Old Style;
+  font-size: 30px;
+}
+
+.verRespuesta, .boton{
+  display:inline;
+  font-family:cursive;
+  font-size: 15px;
+  background-color: rgb(245, 100, 47);
+  color: blue;
+  border-radius: 20px;
+}
+
+body{
+  
+  background-image: url("https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/Pink_Milky_way_Galaxy_Universe_HD_2560x1440.jpg?v=1692811709651");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+}  
+
+#contenedor-1, #contenedor-2, .culturaGeneral, .gastronomia {
+  display: inline;
+  font-family: fantasy;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#boton-1 , #boton-2,.boton {
+  display: inline;
+  font-family:cursive;
+  font-size: 20px;
+  color: indigo;
+  border-radius: 20px;  
+}
+
+#contenedor-2, .culturaGeneral, .gastronomia{
+  display:none;
+}
+    
+#cultura-general-1, #gastronomia-1{
+  display:block;
+}
+
+#cultura_general_2,#cultura_general_3,#gastronomia-2, #gastronomia-3{
+  display:none;
+}
+
+#acierto-1 ,#acierto-2,#acierto-3,#acierto-gastro1,#acierto-gastro2,#acierto-gastro3{
+  float:right;
+  font-family: fantasy;
+  font-size: 20px;
+  color:blue;
+}
+
+input:checked + label{
+  color:darkblue;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+
+}
+
+input[type="radio"]:checked{
+  box-shadow: 0 0 0 3px purple;
+}
