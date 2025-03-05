@@ -1,94 +1,235 @@
-*{
+* {
   margin: 0;
-  padding: 5px;
+  padding: 0;
   box-sizing: border-box;
 }
 
-p{
-  font-family: cursive;
-  font-size: 20px;
-  text-align: left;
+html {
+
+  height: 100%;
 }
 
-img{
-  width:200px;
-  height:200px;
-  display: block;
-  margin: 0 auto;
-}
-
-input{
-  display:inline; 
-}
-
-label{
-  display: inline;
-  font-family: Goudy Old Style;
-  font-size: 30px;
-}
-
-.verRespuesta, .boton{
-  display:inline;
-  font-family:cursive;
-  font-size: 15px;
-  background-color: rgb(245, 100, 47);
-  color: blue;
-  border-radius: 20px;
-}
-
-body{
-  
-  background-image: url("https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/Pink_Milky_way_Galaxy_Universe_HD_2560x1440.jpg?v=1692811709651");
-  background-repeat: no-repeat;
-  background-size:cover;
+body {
   width: 100%;
   height: 100%;
-}  
-
-#contenedor-1, #contenedor-2, .culturaGeneral, .gastronomia {
-  display: inline;
-  font-family: fantasy;
+  background-image: url('img/fondo.png');
+  background-repeat: no-repeat;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-#boton-1 , #boton-2,.boton {
-  display: inline;
-  font-family:cursive;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 200px);
+  text-align: center;
+}
+
+.presentacion {
+  width: 20%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+.contenedor-1, .contenedor-2, .culturaGeneral{
+  width: 100%;
+  height: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contenido-1 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.contenido-2, .opciones {  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 10px;
+  width: 600px; 
+  height: 200px; 
+  grid-template-rows: 1fr 1fr; 
+  
+ } 
+
+ .opciones{
+  width: 400px; 
+  height:100px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+ 
+
+ 
+
+
+#boton-1,
+#boton-2,
+#boton-3,
+#boton-4 {
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
-  color: indigo;
-  border-radius: 20px;  
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  cursor: pointer;
+
 }
 
-#contenedor-2, .culturaGeneral, .gastronomia{
-  display:none;
-}
-    
-#cultura-general-1, #gastronomia-1{
-  display:block;
+
+.label {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
-#cultura_general_2,#cultura_general_3,#gastronomia-2, #gastronomia-3{
-  display:none;
+.input {
+  width: 250px;
+  height: 30px;
+  background-color: #f0f0f0;
+  color: #333;
+  
 }
 
-#acierto-1 ,#acierto-2,#acierto-3,#acierto-gastro1,#acierto-gastro2,#acierto-gastro3{
-  float:right;
-  font-family: fantasy;
+
+input[type="text"] {
+  transition: border 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"]:focus {
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+
+
+.boton {
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  /* margin-top: 10px; */
+  color: #ffffff;
+  cursor: pointer;
   font-size: 20px;
-  color:blue;
 }
 
-input:checked + label{
-  color:darkblue;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+/*  vista opciones*/
+#ver-nombre-usuario , .footer-juego{
   font-size: 30px;
+  margin-top:20px;
+  color: #ffffff;
+}
+
+/* cultura general */
+
+.imagen{
+
+  width: 300px;
+  height: 300px;
+  margin-top: 13px;
+  border: 3px solid fuchsia;
+  border-radius: 10px;
+}
+
+
+.opcion{  
+  text-align: left;
+  padding: 3px;
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.verRespuesta:hover, .opcion:hover, #siguiente:hover{
+  background-color: #6895ef;
+}
+
+
+#siguiente{ 
+  background-color:#7fc2c2
+  
+}
+.informativo{
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #f0f0f0;
 
 }
 
-input[type="radio"]:checked{
-  box-shadow: 0 0 0 3px purple;
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 255, 0.316);
+  border: 3px solid fuchsia;
+  color: #ffffff;
+}
+
+#two , #three{
+  display: none; /* Para ocultarlo por defecto */
+}
+
+
+
+.footer-juego{
+  height: 70px;
 }

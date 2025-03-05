@@ -7,124 +7,25 @@
   <title>Trivia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
- 
+
 <body>
-  <p id="ver-nombre-usuario"></p>
-
-  <div id="contenedor-1">
-    <label>¿Cuál es tu Nombre?</label>
-    <input type="text" id="nombreUsuario" />
-    <button class="boton" type="button" onclick="validar()">Jugar!!</button>
-  </div>
-
-  <form>
-    <div id="contenedor-2">
-      <button id="boton-1" type="button" onclick="cultura()">
-        Cultura general
-      </button>
-      <button id="boton-2" type="button" onclick="gastronomia()">
-        Gastronomia
-      </button>
-    </div>
-    <section class="culturaGeneral" id="culturaGeneral">
-      <div id="cultura_general_1">
-        <p id="tiempo1"></p>
-        <h1 id="puntos"></h1>
-        <h2 id="acierto-1"></h2>
-        <p>1.- ¿En qué país nació Adolf Hitler?</p>
-        <img
-          src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/Adolf_Hitler_cropped_restored.jpg?v=1692641815068" /><br />
-        <input type="radio" id="1" name="pais" value="Alemania" /><label for="1">Alemania</label><br />
-        <input type="radio" id="2" name="pais" value="Eslovenia" /><label for="2">Eslovenia</label><br />
-        <input type="radio" id="3" name="pais" value="Austria" /><label for="3">Austria</label><br />
-        <p id="ver1"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_1()">
-          Consultar Respuesta
-        </button>
-        <button class="boton" type="button" onclick="siguiente_1()">Siguiente</button>
-      </div>
-
-      <div id="cultura_general_2">
-        <p id="tiempo2"></p>
-        <h1 id="puntos2"></h1>
-        <h2 id="acierto-2"></h2>
-        <p>2.- ¿Cuándo acabó la II Guerra Mundial?</p>
-        <img
-          src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/paracaidistas-aliados-con-una-bandera-nazi__1280x1046.jpg?v=1692641951145" /><br />
-        <input type="radio" id="1.1" name="guerra" value="1945" /><label for="guerra">1945</label><br />
-        <input type="radio" id="1.2" name="guerra" value="1801" /><label for="guerra">1801</label><br />
-        <input type="radio" id="1.3" name="guerra" value="1495" /><label for="guerra">1495</label><br />
-        <p id="ver2"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_2()">Consultar Respuesta</button>
-        <button class="boton" type="button" onclick="siguiente_2()">Siguiente</button>
-      </div>
-
-      <div id="cultura_general_3">
-        <p id="tiempo3"></p>
-        <h1 id="puntos3"></h1>
-        <h2 id="acierto-3"></h2>
-        <p>3.-¿Quién inventó la bombilla?</p>
-        <img
-          src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/0b421d231544d83f1057ffdc27906c04.jpg?v=1692720268240" /><br />
-        <input type="radio" id="3.1" name="invento" value="Nicolas-Tesla" /><label for="3.1">Nicola Tesla</label><br />
-        <input type="radio" id="3.2" name="invento" value="Thomas-Edison" /><label for="3.2">Thomas Edison</label><br />
-        <input type="radio" id="3.3" name="invento" value="Albert-Einstein" /><label for="3.3">Albert
-          Einstein</label><br />
-        <p id="ver3"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_3()">Consultar Respuesta</button>
-        <button class="boton" type="button" onclick="siguiente_3()">volver inicio</button>
-      </div>
+  <header>
+    <h1>Juego Trivia</h1>
+  </header> 
+  <main>
+    <section class="presentacion">
+      <img class="image" src="./img/circulo-removebg-preview.png">
+      <h2>TRIVIA QUIZ</h2>
+      <button id="ingresar" class="button" onclick="ingresar()">Iniciar juego</button>
     </section>
 
-    <section class="gastronomia" id="gastronomia">
-      <div id="gastronomia-1">
-        <p id="tiempo1_2"></p>
-        <h1 id="puntosgas"></h1>
-        <h2 id="acierto-gastro1"></h2>
-        <p>1. En la cocina mexicana, hay unas hojas de cactus que se comen a la
-          plancha. ¿Cómo se llaman?</p>
-        <img src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/descarga.jpg?v=1692649854268" /><br />
-        <input type="radio" id="1-1" name="hojas" value="Candelabro" /><label for="cocina">Candelabro</label><br />
-        <input type="radio" id="1-2" name="hojas" value="Agave" /><label for="cocina">Agave</label><br />
-        <input type="radio" id="1-3" name="hojas" value="Nopal" /><label for="cocina">Nopal</label><br />
-        <p id="ver-1-1"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_1_2()">Consultar Respuesta
-        </button>
-        <button class="boton" type="button" onclick="siguiente_2_1()">Siguiente</button>
-      </div>
+  </main>
+  
 
-      <div id="gastronomia-2">
-        <p id="tiempo2_2"></p>
-        <h1 id="puntosgas2"></h1>
-        <h2 id="acierto-gastro2"></h2>
-        <p>2. El ceviche es el plato nacional peruano. ¿Cuál de estos
-          ingredientes no lleva?</p>
-        <img
-          src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/Ceviche-peruano-de-corvina-con-leche-de-tigre-muy-facil-y-rico.jpg?v=1692650373557" /><br />
-        <input type="radio" id="2-1" name="ceviche" value="Cilantro" /><label for="2-1">Cilantro</label><br />
-        <input type="radio" id="2-2" name="ceviche" value="Pollo" /><label for="2-2">Pollo</label><br />
-        <input type="radio" id="2-3" name="ceviche" value="Lima" /><label for="2-3">Lima</label><br />
-        <p id="ver-1-2"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_2_2()">Consultar Respuesta</button>
-        <button class="boton" type="button" onclick="siguiente_2_2()">Siguiente</button>
-      </div>
 
-      <div id="gastronomia-3">
-        <p id="tiempo3_2"></p>
-        <h1 id="puntosgas3"></h1>
-        <h2 id="acierto-gastro3"></h2>
-        <p>3. ¿De que pais viene el guiso Charquicán?</p>
-        <img
-          src="https://cdn.glitch.global/a6269586-2db0-496b-8e6f-121b42a8a137/Charquic%C3%A1n.png?v=1692720598235" /><br />
-        <input type="radio" id="3-1" name="guiso" value="Colombia" /><label for="3-1">Colombia</label><br />
-        <input type="radio" id="3-2" name="guiso" value="Peru" /><label for="3-2">Perú</label><br />
-        <input type="radio" id="3-3" name="guiso" value="Chile" /><label for="3-3">Chile</label><br />
-        <p id="ver-1-3"></p>
-        <button class="verRespuesta" type="button" onclick="validar_respuesta_3_2()">Consultar Respuesta</button>
-        <button class="boton" type="button" onclick="siguiente_2_3()">Volver inicio</button>
-      </div>
-    </section>
-  </form>
+  <footer>
+    <p>Desarrollado por Yamileth Caldera</p>
+  </footer>
 
   <script type="text/javascript" src="main.js"></script>
 </body>
