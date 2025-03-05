@@ -1,0 +1,23 @@
+@import url(./shared.css);
+
+
+#boton-1,
+#boton-2,
+#boton-3,
+#boton-4 {
+    background-color: var(--color-background);
+    border: 3px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: var(--color-text);
+    cursor: pointer;
+}
+#ver-nombre-usuario{
+    text-align: center;
+    color: var(--color-text);
+    font-size: var(--font-size);
+}

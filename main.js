@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+
+
+
+
 // ir según la opción seleccionada
 function cultura() {
   temporizador = 61;
@@ -150,7 +155,7 @@ function validar_respuesta_1() {
     document.getElementById("acierto-1").innerHTML = acierto + "/3";
   } else {
     guardando.innerHTML = `❌ Incorrecto, la respuesta correcta es: ${respuesta_correcta_1}`;
-    document.getElementById("ver1").style.color = "red";
+    document.getElementById("ver1").style.color = "white";
   }
 }
 
@@ -180,14 +185,14 @@ function validar_respuesta_2() {
 
   if (respuesta_seleccionada === respuesta_correcta_2) {
     guardando.innerHTML = `✅ Correcto!!!, la respuesta es: ${respuesta_seleccionada}`;
-    document.getElementById("ver1").style.color = "green";
+    document.getElementById("ver2").style.color = "green";
     puntaje += 100;
     document.getElementById("puntos-2").innerHTML = puntaje + " puntos";
     acierto += 1;
     document.getElementById("acierto-2").innerHTML = acierto + "/3";
   } else {
     guardando.innerHTML = `❌ Incorrecto, la respuesta correcta es: ${respuesta_correcta_2}`;
-    document.getElementById("ver2").style.color = "red";
+    document.getElementById("ver2").style.color = "white";
   }
 }
 
@@ -224,19 +229,13 @@ function validar_respuesta_3() {
     document.getElementById("acierto-3").innerHTML = acierto + "/3";
   } else {
     guardando.innerHTML = `❌ Incorrecto, la respuesta correcta es: ${respuesta_correcta_3}`;
-    document.getElementById("ver3").style.color = "red";
+    document.getElementById("ver3").style.color = "white";
   }
 }
 
 // boton ir a la siguiente pregunta
 document.getElementById('siguiente_3').onclick = function() {
-  document.getElementById("three").style.display = "none";
-  ocument.getElementById("culturaGeneral").style.display = "none"; // revisar
-  document.getElementById("contenedor-2").style.display = "block"; // mostrar otra vez la lista de opciones de juego
-  
-
-  document.getElementById("ver-nombre-usuario").style.display = "none";
-  document.getElementById("nombreUsuario").value = "";
+  window.location.href = "index-opciones.html";
 };
 
 
