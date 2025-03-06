@@ -34,3 +34,7 @@ main {
   margin-top: 10px;
   cursor: pointer;
 }
+
+.button:hover {
+  background: linear-gradient(135deg, var(--color-background), var(--color-border));
+}

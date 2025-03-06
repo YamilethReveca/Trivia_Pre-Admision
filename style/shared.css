@@ -56,18 +56,21 @@ header {
     font-size: 20px;
 }
 
-.contenedor-1,
-.contenedor-2,
-.culturaGeneral , .gastronomia, .programacion, .conduccion{
+.contenedor{
     width: 100%;
-    height: calc(100% - 200px);
+    height: calc(100% - 190px);
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.contenido-2,
+.center{
+    text-align: center;
+    
+}
+
+.contenido__contenedor,
 .opciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -83,13 +86,12 @@ header {
     height: 100px;
     color: var(--color-text);
     cursor: pointer;
-    margin-bottom: 3px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#boton-1,
-#boton-2,
-#boton-3,
-#boton-4 {
+.botones{
     background-color: var(--color-background);
     border: 3px solid var(--color-border);
     display: flex;
@@ -103,6 +105,11 @@ header {
     border-radius: 10px;
 }
 
+
+.botones:hover{
+
+    background: linear-gradient(135deg, var(--color-background), var(--color-border));
+}
 p{
    color: var(--color-text);
 }
@@ -125,13 +132,12 @@ p{
     cursor: pointer;
     font-size: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
 }
 
 .verRespuesta:hover,
 .opcion:hover,
 .next:hover {
-    background-color: #6895ef;
+    background: linear-gradient(135deg, var(--color-background), var(--color-border));
 }
 
 

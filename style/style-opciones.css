@@ -16,8 +16,14 @@
     color: var(--color-text);
     cursor: pointer;
 }
-#ver-nombre-usuario{
+
+#ver-nombre-usuario {
     text-align: center;
     color: var(--color-text);
     font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 46px;
+
 }
