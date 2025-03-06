@@ -69,6 +69,8 @@ document.querySelectorAll('.opcion').forEach(opcion => {
 
 
 
+
+
 // ir según la opción seleccionada
 function cultura() {
   temporizador = 61;
@@ -87,6 +89,7 @@ function cultura() {
   let categoria = document.getElementById('boton-1').dataset.category;
   if (categoria === 'cultura') {
     window.location.href = "index-cultura.html";
+
   }
 
 

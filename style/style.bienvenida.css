@@ -44,6 +44,9 @@ input[type="text"]:disabled {
   box-shadow: none;
 }
 
+#validarNombre:hover{
+  background: linear-gradient(135deg, var(--color-background), var(--color-border));
+}
 
 /*  vista opciones*/
 #ver-nombre-usuario,
