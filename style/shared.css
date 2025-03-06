@@ -103,6 +103,10 @@ header {
     border-radius: 10px;
 }
 
+p{
+   color: var(--color-text);
+}
+
 .imagen {
     width: 300px;
     height: 290px;
@@ -126,12 +130,12 @@ header {
 
 .verRespuesta:hover,
 .opcion:hover,
-#siguiente:hover {
+.next:hover {
     background-color: #6895ef;
 }
 
 
-#siguiente {
+.next {
     background-color: #7fc2c2
 }
 

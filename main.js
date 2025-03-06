@@ -89,7 +89,7 @@ function gastronomia() {
 
   identificadorTemporizador = setInterval(function () {
     --temporizador;
-    document.getElementById("tiempo1").innerHTML = temporizador;
+    document.getElementById("tiempo1-2").innerHTML = temporizador;
 
 
     if (temporizador <= 0) {
@@ -125,6 +125,23 @@ function gastronomia() {
 
 
 function programacion() {
+
+  temporizador = 61;
+
+  identificadorTemporizador = setInterval(function () {
+    --temporizador;
+    document.getElementById("time").innerHTML = temporizador;
+
+
+    if (temporizador <= 0) {
+      clearInterval(identificadorTemporizador);
+    }
+
+  }, 1000);
+
+
+
+
   let categoria = document.getElementById('boton-3').dataset.category;
 
   if (categoria === 'programacion') {
@@ -138,6 +155,25 @@ function programacion() {
 }
 
 function conduccion() {
+
+  temporizador = 61;
+
+  identificadorTemporizador = setInterval(function () {
+    --temporizador;
+    document.getElementById("time_manejo_1").innerHTML = temporizador;
+
+
+    if (temporizador <= 0) {
+      clearInterval(identificadorTemporizador);
+    }
+
+  }, 1000);
+
+
+
+
+
+
   let categoria = document.getElementById('boton-4').dataset.category;
 
   if (categoria === 'conduccion') {
