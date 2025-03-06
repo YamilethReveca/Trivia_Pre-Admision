@@ -58,7 +58,7 @@ header {
 
 .contenedor-1,
 .contenedor-2,
-.culturaGeneral {
+.culturaGeneral , .gastronomia, .programacion, .conduccion{
     width: 100%;
     height: calc(100% - 200px);
     display: flex;
@@ -144,7 +144,7 @@ header {
 }
 
 #two,
-#three {
+#three, #pregunta-2, #pregunta-3 , #lession_2, #lession_3, #lession_manejo_2, #lession_manejo_3 {
     display: none;
     /* Para ocultarlo por defecto */
 }
