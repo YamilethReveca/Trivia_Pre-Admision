@@ -61,23 +61,27 @@ document.querySelectorAll('.opcion').forEach(opcion => {
 
     console.log('valor seleccionado', this.value);
 
-
   })
-
 
 })
 
 
 
-
-
 // ir según la opción seleccionada
 function cultura() {
-  temporizador = 61;
+  let categoria = document.getElementById('boton-1').dataset.category;
+  if (categoria === 'cultura') {
+    window.location.href = "index-cultura.html";
+  }
+}
+
+function inicializarCategirias() {
+  temporizador = 60;
+  document.querySelector(".minuto").innerHTML = temporizador;
 
   identificadorTemporizador = setInterval(function () {
     --temporizador;
-    document.getElementById("tiempo1").innerHTML = temporizador;
+    document.querySelector(".minuto").innerHTML = temporizador;
 
 
     if (temporizador <= 0) {
@@ -85,24 +89,15 @@ function cultura() {
     }
 
   }, 1000);
-
-  let categoria = document.getElementById('boton-1').dataset.category;
-  if (categoria === 'cultura') {
-    window.location.href = "index-cultura.html";
-
-  }
-
-
-  document.getElementById('one').style.display = "block"
-  document.getElementById("two").style.display = "none"; // oculto el contenedor-2  
-
 }
+
+inicializarCategirias();
 
 
 // validar respuesta primera pregunta cultura
 function validar_respuesta_1() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver1");
 
@@ -132,25 +127,27 @@ document.getElementById('siguiente').onclick = function () {
   document.getElementById("two").style.display = "block";
 
 
-
+  document.getElementById("tiempo-2").innerHTML = temporizador;
 
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("tiempo-2").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
 
-
   }, 1000);
-};
+}
+
 
 
 // se la segunda pregunta de cultura general
 
 function validar_respuesta_2() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver2");
 
@@ -182,13 +179,16 @@ document.getElementById('siguiente_2').onclick = function () {
   document.getElementById("two").style.display = "none";
   document.getElementById('three').style.display = "block";
 
+   document.getElementById("tiempo-3").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("tiempo-3").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
-
 
   }, 1000);
 
@@ -200,7 +200,7 @@ document.getElementById('siguiente_2').onclick = function () {
 // la tercera pregunta de cultura
 function validar_respuesta_3() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver3");
 
@@ -233,20 +233,6 @@ document.getElementById('siguiente_3').onclick = function () {
 // GASTRONOMIA
 function gastronomia() {
 
-  temporizador = 61;
-
-  identificadorTemporizador = setInterval(function () {
-    --temporizador;
-    document.getElementById("tiempo1-2").innerHTML = temporizador;
-
-
-    if (temporizador <= 0) {
-      clearInterval(identificadorTemporizador);
-    }
-
-  }, 1000);
-
-
   let categoria = document.getElementById('boton-2').dataset.category;
 
   if (categoria === 'gastronomia') {
@@ -255,17 +241,14 @@ function gastronomia() {
   }
 
 
-  document.getElementById('pregunta-1').style.display = "block"
-  document.getElementById("pregunta-2").style.display = "none"; // oculyo el contenedor-2
-
-
 }
+
 
 
 // validar primera pregunta de gastronomia
 function validar_respuesta_1_1() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver1-1");
 
@@ -295,13 +278,17 @@ function siguiente_pregunta() {
   document.getElementById('pregunta-1').style.display = "none";
   document.getElementById('pregunta-2').style.display = "block";
 
+  
+  document.getElementById("tiempo_2").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("tiempo_2").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
-
 
   }, 1000);
 
@@ -313,7 +300,7 @@ function siguiente_pregunta() {
 // validar segunda pregunta de gastronomia
 function validar_respuesta_1_2() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver1-2");
 
@@ -343,15 +330,21 @@ function siguiente_pregunta_2() {
   document.getElementById('pregunta-2').style.display = "none";
   document.getElementById('pregunta-3').style.display = "block";
 
+  document.getElementById("tiempo_3").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("tiempo_3").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
 
-
   }, 1000);
+
+
+  
 }
 
 
@@ -359,7 +352,7 @@ function siguiente_pregunta_2() {
 // validar tercera pregunta de gastronomia
 function validar_respuesta_1_3() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver1-3");
 
@@ -395,36 +388,20 @@ function siguiente_pregunta_3() {
 //PROGRAMACION
 function programacion() {
 
-  temporizador = 61;
-
-  identificadorTemporizador = setInterval(function () {
-    --temporizador;
-    document.getElementById("time").innerHTML = temporizador;
-
-
-    if (temporizador <= 0) {
-      clearInterval(identificadorTemporizador);
-    }
-
-  }, 1000);
-
   let categoria = document.getElementById('boton-3').dataset.category;
 
   if (categoria === 'programacion') {
 
     window.location.href = "index-programacion.html";
   }
-  document.getElementById('lession_1').style.display = "block"
-  document.getElementById("lession_2").style.display = "none"; // oculyo el contenedor-2
-
-
+ 
 }
 
 
 // primera  pregunta
 function validar_respuesta_lession_1() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_1_programacion");
 
@@ -455,13 +432,17 @@ function siguiente_pregunta_programacion(){
   document.getElementById('lession_1').style.display = "none";
   document.getElementById('lession_2').style.display = "block";
 
+  
+  document.getElementById("time_2").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("time_2").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
-
 
   }, 1000);
 
@@ -473,7 +454,7 @@ function siguiente_pregunta_programacion(){
 // segunda pregunta 
 function validar_respuesta_lession_2() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_2_programacion");
 
@@ -504,16 +485,19 @@ function siguiente_pregunta_programacion_2(){
   document.getElementById('lession_2').style.display = "none";
   document.getElementById('lession_3').style.display = "block";
 
+  
+  document.getElementById("time_3").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("time_3").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
 
-
   }, 1000);
-
 
 }
 
@@ -523,7 +507,7 @@ function siguiente_pregunta_programacion_2(){
 
 function validar_respuesta_lession_3() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_3_programacion");
 
@@ -560,20 +544,6 @@ function siguiente_pregunta_programacion_3(){
 
 function conduccion() {
 
-  temporizador = 61;
-
-  identificadorTemporizador = setInterval(function () {
-    --temporizador;
-    document.getElementById("time_manejo_1").innerHTML = temporizador;
-
-
-    if (temporizador <= 0) {
-      clearInterval(identificadorTemporizador);
-    }
-
-  }, 1000);
-
-
   let categoria = document.getElementById('boton-4').dataset.category;
 
   if (categoria === 'conduccion') {
@@ -581,18 +551,12 @@ function conduccion() {
     window.location.href = "index-conduccion.html";
   }
 
-
-  document.getElementById('lession_manejo_1').style.display = "block"
-  document.getElementById("lession_manejo_2").style.display = "none"; // oculyo el contenedor-2
-
 }
-
-// conducción 
 
 // primera  pregunta
 function validar_respuesta_conduccion_1() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_1_conduccion");
 
@@ -622,15 +586,20 @@ function siguiente_pregunta_conduccion_1(){
   document.getElementById('lession_manejo_1').style.display = "none";
   document.getElementById('lession_manejo_2').style.display = "block";
 
+  document.getElementById("time_manejo_2").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("time_manejo_2").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
 
-
   }, 1000);
+
+
 }
 
 
@@ -639,7 +608,7 @@ function siguiente_pregunta_conduccion_1(){
 // segunda  pregunta conduccion
 function validar_respuesta_conduccion_2() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_2_conduccion");
 
@@ -669,13 +638,16 @@ function siguiente_pregunta_conduccion_2(){
   document.getElementById('lession_manejo_2').style.display = "none";
   document.getElementById('lession_manejo_3').style.display = "block";
 
+  document.getElementById("time_manejo_3").innerHTML = temporizador;
+
   identificadorTemporizador = setInterval(function () {
     --temporizador;
     document.getElementById("time_manejo_3").innerHTML = temporizador;
-    if (temporizador === 0) {
+
+
+    if (temporizador <= 0) {
       clearInterval(identificadorTemporizador);
     }
-
 
   }, 1000);
 }
@@ -685,7 +657,7 @@ function siguiente_pregunta_conduccion_2(){
 // tercera  pregunta conduccion
 function validar_respuesta_conduccion_3() {
   clearInterval(identificadorTemporizador);
-  temporizador = 61;
+  temporizador = 60;
 
   let guardando = document.querySelector("#ver_respuesta_3_conduccion");
 
@@ -714,23 +686,3 @@ function validar_respuesta_conduccion_3() {
 function siguiente_pregunta_conduccion_3(){
   window.location.href = "index-opciones.html";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
